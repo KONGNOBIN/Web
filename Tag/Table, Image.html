@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td { border: 1px solid; }
+    </style>
+    <!-- 표 요소 Test 주석 해제
+        <title>table</title>
+        <style media="screen">
+            td { border: 1px solid; width: 50px; height: 50px;}
+        </style>
+    -->
+</head>
+
+<!-- ■■ 이미지 요소 ■■ -->
+<body style="background-color: rgb(238, 225, 225)">
+    <h2>■ 이미지 요소</h2>  
+    <!-- 
+        src : <img>의 필수 속성, 이미지의 경로를 나타낸다
+           상대경로 : ./ [현재 페이지가 있는 폴더] ../ [상위폴더] 
+           절대경로 : C:/이미지경로 | http://이미지
+
+        width : 이미지 가로 (기본단위 픽셀)
+        height : 이미지 세로 (기본단위 픽셀)
+        둘 중 하나만 선언하면 나머지 속성은 비율에 맞게 자동 변경
+
+
+        확장자
+           gif : 256색, 용량이 작다, 애니메이션, 투명이미지 가능
+           jpg : 높은 압축률, 자연스러운 색상 표현 가능 [가장 많이 사용], 투명이미지 사용X
+           png : 이미지 손실이 없고, 투명, 반투명 모두 지원 [요즘 많이 사용]
+    -->
+    <img src="http://placehold.it/500x250" alt="" width="400" height="400">
+    <img src="Pizza.jpg" alt="피자" width="250">    
+    <img src="Pizza.png" alt="피자" width="250">        
+</body>
+
+<!-- ■■ 표 ■■ -->
+<body>
+    <h2>■ 표</h2>
+    <!--
+        <td>, <th> : 데이터 셀 (table-cell)
+        <tr> : 행 (table-row)
+        <table> : 표
+        <caption> : 표의 제목
+
+        <thead> : 제목 행의 그룹
+        <tbody> : 본문 행의 그룹
+        <tfoot> : 바닥 행의 그룹        
+        * HTML5.1 ~ 5.2(현재) <tfoot>은 <tbody>뒤에 위치해야 함
+
+        <colspan> : 셀을 가로방향으로 병합
+        <rowspan> : 셀을 세로방향으로 병합
+        
+        이외 테이블 속성
+        <colgroup>
+        <col>
+        scope
+        headers
+        참고링크 : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+    -->
+    <table>
+        <caption>Monthly Savings</caption>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td rowspan="2">$80</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <!--td>$800</td-->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Sum</td>
+                <!--td>$180</td-->
+            </tr>
+        </tfoot>
+    </table>    
+
+    <table>
+        <caption>Specification values</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">grade</th>
+                <th rowspan="2">Point</th>
+                <th colspan="2">Strength</th>                
+                <th rowspan="2">Percent</th>
+            </tr>
+            <tr>               
+                <th>kg/mm</th>
+                <th>lb/in</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hard</td>
+                <td>0.45</td>
+                <td>56.2</td>
+                <td>80,000</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>0.45</td>
+                <td>49.2</td>
+                <td>70,000</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Soft</td>
+                <td>0.45</td>
+                <td>42.2</td>
+                <td>60,000</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>

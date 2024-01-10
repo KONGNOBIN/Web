@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>        
+     <!--
+        <input type = ""> : 내용이 없는 빈 요소이며, type 속성을 통해 여러 양식으로 사용
+            text : 아이디, 이름, 주소, 전화번호 등 단순한 텍스트를 입력할 때 사용
+            password : 암호와 같이 공개할 수 없는 내용을 입력할 때 사용
+            radio : 라디오 버튼 (중복 선택이 불가능) * cheked : 체크(기본값) * name 속성으로 그룹화 가능
+            checkbox : 체크박스 (중복 선택이 가능) * cheked : 체크(기본값) * name 속성으로 그룹화 가능
+            file : 파일을 서버에 올릴 때 사용
+            submit : form의 값을 전송하는 버튼
+            reset : form의 값을 초기화하는 버튼
+            image : 이미지를 삽입할 수 있는 버튼 (submit과 동작이 동일함)
+            button : 아무 기능이 없는 버튼
+
+        <select> : 콤보박스
+        <textarea> : 여러 줄의 텍스트를 입력할 때 사용.
+            cols : 가로 크기를 조절하는 속성 (한 줄에 들어가는 글자의 수)
+            rows : 세로 크기를 조절하는 속성 (화면에 보여지는 줄 수)
+        <button> : submit, reset, button 3가지의 타입이 있으며 input 타입의 기능과 동일, 단 빈태그가 아님.
+        <label> : form 요소의 이름과 form 요소를 명시적으로 연결.
+                  form 요소의 id 속성값과 <label>의 for 속성값은 동일해야함.
+
+        <fieldset>, <legend> : form 요소를 구조화 하는 태그.
+        <fieldset> : 여러 개의 폼 요소를 그룹화하여 구조적으로 만들기 위해 사용.
+        <legend> : 폼 요소의 제목으로 <fieldset> 내부에 작성.
+    -->
+    <form action="http://www.naver.com">
+        <h2>Form 관련 요소</h2>
+        <fieldset>
+            <legend>기본정보</legend>
+            <label for="userid">ID</label> : <input type="text" placeholder="ID" id="userid"><br> <!--placeholder : 입력창 가이드 -->
+            <label for="userpw">PW</label> : <input type="password" id="userpw"><br> 
+            성별 : <label for="male">남자</label> <input type="radio" name="gender" id="male" checked> <label for="female">여자</label> <input type="radio" name="gender" id="female"><br>
+        </fieldset>
+        <fieldset>
+            <legend>부가정보</legend>
+            취미 : 영화감상 <input type="checkbox" name="hobby"> 독서 <input type="checkbox" name="hobby"> 음악 <input type="checkbox" name="hobby"><br>
+            프로필 사진 업로드 : <input type="file"><br>            
+            지역 : 
+            <select>
+                <option>서울</option>
+                <option>경기</option>
+                <option selected>부산</option>
+                <option>제주</option>
+            </select><br>
+            자기소개 : <textarea cols="30" rows="5" placeholder="100자 이내로 작성해 주세요."></textarea><br>
+            <button type="submit">전송</button><br> <!-- 아래 input type="submit"과 동일, 빈태그가 아님 --> 
+            <button type="reset">취소</button><br>  <!-- 아래 input type="reset"과 동일, 빈태그가 아님 --> 
+            <input type="submit" value="전송"><br> <!-- form의 값을 전송하는 버튼 -->
+            <input type="reset" value="취소"><br>  <!-- form의 값을 초기화하는 버튼 -->
+            <input type="button" value="등록"><br> <!-- 아무 기능이 없는 버튼, 개발자가 커스터마이징 해야함 -->
+            <input type="image" src="http://placehold.it/50x50?text=click" alt="로그인" width="50" height="50"><br>    <!-- 이미지를 넣을 수 있는 버튼 form에 값을 전송-->
+        </fieldset>
+    </form>
+</body>
+
+<body>        
+    <!--
+       <form 요소>
+           action : 폼 데이터를 처리하기 위한 서버의 주소
+           method : 데이터를 전송하는 방식을 지정 (get, post)
+   -->
+   <form action="/result.html" method="get">
+       <h2>Form 관련 요소</h2>       
+           <legend>기본정보</legend>
+           <label for="userid">ID</label> : <input type="text" placeholder="ID" id="userid" name="id"><br> <!--placeholder : 입력창 가이드 -->
+           <label for="userpw">PW</label> : <input type="password" id="userpw" name="pw"><br> 
+           <input type="submit" value="전송"><br> <!-- form의 값을 전송하는 버튼 -->       
+   </form>
+</body>
+</html>
