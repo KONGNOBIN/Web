@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사원등록</title>
+    <style>     
+     body {
+            font-family: '맑은 고딕', 'Malgun Gothic', sans-serif;
+            background-color: #ecf0f1; /* 밝은 배경색으로 변경 */
+            color: #34495e; /* 어두운 텍스트 색상으로 변경 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+         h1 {
+            font-size: 2em; /* 원하는 크기로 조절 */
+            color: #3498db; /* 원하는 색상으로 조절 */
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        } 
+
+        table {
+            width: 100%;
+            border-collapse: collapse;                  
+        } 
+        
+        
+        th, td {
+            border: 2px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        td{ 
+            width: 200px;   
+        }
+
+        td:nth-child(odd) { 
+            width: 100px;                      
+            position: sticky;
+            left: 0;  
+            background-color: #e3e3e9;
+        }
+
+        
+
+        input, select {
+            width: 100%; /* 부모 요소의 100%로 설정하여 셀 크기에 맞게 조절 */
+            height: 30px;
+            box-sizing: border-box; /* padding, border 포함한 크기 지정 */
+        }
+
+        .subinput{   
+            padding: 5px 5px;
+            width: 30px;         
+            height: 10px;
+            box-sizing: border-box; /* padding, border 포함한 크기 지정 */
+        }
+
+        tr {
+            height: 55px;
+        }
+
+        button {
+            width: 120px;
+            height: 50px;
+            margin-right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #3498db;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }                              
+       
+    </style>
+</head>
+<body>
+    <form action="/result.html" method="get"> 
+    <h1>사원 정보 등록</h1>
+    <div>
+        <p>
+            <a target="_blank" href = "Reg.png"><img src="button.png" alt="등록방법" ></a>
+            <!-- <a href = "/">파일경로</a>  -->
+        </p>
+    </div>
+    <fieldset> 
+        <legend>기본정보</legend>
+         
+        <table>
+            <tr>
+                <td>
+                    <label for="companycode">회사</label>
+                </td>
+                <td>
+                    <select id="companycode" name="companycode">
+                        <option selected>트라이얼코리아</option>
+                        <option>백스톡</option>
+                        <option>머그</option>
+                        <option>마켓브이</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="EmpType">사원타입</label>
+                </td>
+                <td>
+                    <select id="EmpType" name="EmpType">
+                        <option selected>정규직</option>
+                        <option>계약직</option>
+                        <option>시급제</option>                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="EmpCode">사원코드</label>
+                </td>
+                <td>
+                    <input type="text" id="EmpCode" maxlength="8" name="EmpCode" required> 
+                </td>
+                <td>
+                    <label for="EmpName">이름</label>
+                </td>
+                <td>
+                    <input type="text" id="EmpName" maxlength="20" name="EmpName" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="RegNum">주민등록번호</label>
+                </td>
+                <td>                    
+                    <input type="text" id="RegNum" maxlength="14" name="RegNum" required> 
+                </td>                             
+                <td>
+                    <label for="PhoneNum">전화번호</label>
+                </td>
+                <td>                    
+                    <input type="text" id="PhoneNum" maxlength="30" name="PhoneNum"> 
+                </td>    
+            </tr>
+        </table>              
+    </fieldset>
+    <br>
+    <fieldset> 
+        <legend>소속정보</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="Sosok">소속</label>
+                </td>
+                <td>                    
+                    <label for="Center" class="subinput">본사</label> <input type="radio" name="Sosok" id="Center" class="subinput" checked> 
+                    <label for="Store" class="subinput">지점</label> <input type="radio" name="Sosok" id="Store" class="subinput" >
+                </td>   
+                <td>
+                    <label for="InDate">입사일</label>
+                </td>
+                <td>                    
+                    <input type="date" id="InDate" maxlength="30" name="InDate" min="2001-01-01" max="2050-01-01"> 
+                </td>   
+            </tr>
+            <tr>
+                <td>
+                    <label for="Dept">부서</label>
+                </td>
+                <td>                    
+                    <input type="text" id="Dept" list="pack">
+                    <datalist id="pack">
+                        <option selected></option>
+                        <option value="1">경리부</option>
+                        <option value="2">시스템부</option>
+                        <option value="3">총무부</option>
+                        <option value="4">인사부</option>
+                        <option value="5">함안</option>
+                        <option value="6">김해</option>
+                    </datalist> 
+                </td> 
+                <td>
+                    <label for="OutDate">퇴사일</label>
+                </td>
+                <td>                    
+                    <input type="date" id="OutDate" maxlength="30" name="OutDate" min="2001-01-01" max="2050-01-01"> 
+                </td>  
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset> 
+        <legend>기타정보</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="picture">사원이미지</label>
+                </td>
+                <td>                    
+                    <input type="file" id="picture", name="picture"> 
+                </td>  
+                <td>
+                    <label for="Range">범위</label>
+                </td>
+                <td>                    
+                    <input type="range" id="Range" name="Range" min="0" max="10"> 
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <label for="AddH">추가휴무</label>
+                </td>
+                <td>                    
+                    <input type="number" id="AddH" name="Range" min="0" max="10" value="0"> 
+                </td>  
+                <td>
+                    <label for="OutDate">퇴사일</label>
+                </td>
+                <td>                    
+                    <input type="date" id="OutDate" maxlength="30" name="OutDate" min="2001-01-01" max="2050-01-01"> 
+                </td>  
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <div>
+        <button type="submit">등록하기</button> 
+        <button type="reset">클리어</button>  
+    </div>
+</form>
+</body>
+</html>

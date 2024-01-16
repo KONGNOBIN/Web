@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Internal -->
+    <style>  
+        h2 { color: blue; font-size:2em; }
+        /*
+          선택자(selector) - "h2"
+          속성(property) - "color"
+          값(value) - "blue"
+          선언(declaration) - "color: blue; font-size:2em;"
+          선언부(declaration block) - "{ color: blue; font-size:2em; }"
+          규칙(rule set) - "h2 { color: blue; font-size:2em; }"
+        */
+    </style>   
+    
+    <!-- External -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+  <body>
+    <h1 style="color:red;"> 내용 </h1>  <!--Inline-->
+
+    <h2>
+        테스트
+    </h2>
+
+    <h3>
+        External
+    </h3>
+
+    <br> <h3 class="title"> ■ class, id 선택자 </h3>
+    <dl>
+        <dt class="html">HTML</dt>
+        <dd><span class="html">HTML</span>은 문서의 구조를 나타냅니다.</dd>
+        <dt class="css">CSS</dt>
+        <dd><span class="css">CSS</span>는 문서의 표현을 나타냅니다.</dd>
+        <!--다중선택자-->
+        <dt class="html css">JS</dt>     
+        <dd><span class="html css">JS</span>는 문서의 동작을 나타냅니다.</dd>
+        <p id="id-selector">id 선택자는 해쉬 기호를 사용합니다.</p>
+    </dl>
+
+    <br> <h3 class="title"> ■ 정확한 속성값 </h3>    
+    <p class="foo">Hello</p>
+    <p class="bar">Hello</p>
+    <p class="baz" id="title">Hello</p>
+
+    <br> <h3 class="title"> ■ 부분속성값 Test </h3>    
+    <p class="color hot" id="title">Hello</p>
+    <p class="cool color" id="title">Hello</p>
+    <p class="colorful nature" id="title">Hello</p>   
+
+    <br> <h3 class="title"> ■ 부모·자식 자손·조상 </h3>       
+    <div>        
+      <span>div > span : div 요소의 자식인 span은 파랑</span>
+      <h4><span>div span : div 요소의 자손인 span은 주황</span>: body > div span + h4 : 조합</h4>        
+      <span>div > span : div 요소의 자식인 span은 파랑/span>
+    </div>
+    <span>div + span : div 요소와 인접한 span은 빨강</span>
+    <p>아무 영향이 없는 태그내용</p>
+
+    <br> <h3 class="title"> ■ 가상 class </h3> 
+    <h5> [문서 구조] </h5> 
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>      
+    </ul>
+
+    <h5> [링크] </h5> 
+    <a href="http://naver.com/">네이버</a>
+    <a href="http://google.com/">구글</a>
+    <a href="http://daum.com/">다음</a>
+
+    <br> <h3 class="title"> ■ 가상 요소 </h3> 
+    <p class="virtual">가상요소 테스트중입니다.</p>
+
+    <br> <h3 class="title"> ■ 상속 </h3> 
+    <h1 class="inherit">상속 <em>테스트</em></h1>
+    <h1 id="inherit">상속<em>테스트</em></h1>      
+    </div>
+  </body>
+</html>

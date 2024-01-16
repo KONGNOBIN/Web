@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { color: red !important; }       /* 0,1,0      1 */        
+        .index > .in_item { color: pink; }    /*0,2,0      3   */
+        div ul .in_item { color: orange; }    /*0,1,2      5 */
+        .in_item.in1 { color: black; }        /*0,2,0      2 */
+        p + ul.index { color: yellow; }       /*0,1,2      4  */
+    </style>
+</head>
+<body>
+    <div class="box" style="color: yellow">
+
+      <h1 class="title">title</h1>
+      <p class="desc">description</p>
+      
+      <ul class="index" style="color: blue;">        
+        <li class="in_item in1">index 1</li>
+        <li class="in_item ">index 2</li>      
+      </ul>
+</body>
+</html>
