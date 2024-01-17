@@ -10,17 +10,49 @@
         div ul .in_item { color: orange; }    /*0,1,2      5 */
         .in_item.in1 { color: black; }        /*0,2,0      2 */
         p + ul.index { color: yellow; }       /*0,1,2      4  */
+
+        
+        h1 { margin: 0 0 20px 0; }
+        /* div { margin-top: 40px; } */
+        p { margin-top: 30px ;}
+
+        .wrap { width: 500px; margin: 0 5px; padding: 10px; border: 15px solid red; }
+        .boxs { width: 60%; padding: 20px; border: 10px solid black; }
+        .inner { width: 30%; padding: 5px; background: pink; }
+
+        .parent { width: 300px; padding: 10px; border: 10px solid black; }
+        .child { height: 30%; padding: 15px; border: 5px solid black; }
     </style>
 </head>
 <body>
+    <br> <h3 class="title"> ■ chapter4 문제 </h3>
     <div class="box" style="color: yellow">
-
       <h1 class="title">title</h1>
-      <p class="desc">description</p>
-      
+      <p class="desc">description</p>      
       <ul class="index" style="color: blue;">        
         <li class="in_item in1">index 1</li>
         <li class="in_item ">index 2</li>      
       </ul>
+    </div>
+
+    <br> <h3 class="title"> ■ chapter5 문제 I </h3>  
+    <h1>Margin Collapse</h1>
+    <div><p>What do you think?</p></div>      
+    
+    <br> <h3 class="title"> ■ chapter5 문제 II </h3>  
+    <div class="wrap">
+      <div class="boxs">          
+        <div class="inner">
+          inner          
+        </div>        
+      </div>        
+    </div>
+       
+    <br> <h3 class="title"> ■ chapter5 문제 III </h3>
+    <div class="parent">
+      <div class="child">        
+      </div>
+    </div>
+
 </body>
 </html>

@@ -115,10 +115,10 @@ a:active {color:red;}              /* 사용자 입력으로 활성화된 요소
 /*
     ■ 가상 요소
 */ 
-p.virtual:before { content: "앞앞"; color:blueviolet}  /* 가장 앞에 요소를 삽입 */
-p:after { content: "뒤뒤"; color:forestgreen }         /* 가장 뒤에 요소를 삽입 */
-p:first-line { color:red; }                            /* 요소의 첫 번째 줄에 있는 텍스트 */
-p:first-letter { color:blue; }                         /* 블록 레벨 요소의 첫 번째 문자 */
+/*(p.virtual:before { content: "앞앞"; color:blueviolet}  /* 가장 앞에 요소를 삽입 */
+/*p:after { content: "뒤뒤"; color:forestgreen }         /* 가장 뒤에 요소를 삽입 */
+/*p:first-line { color:red; }                            /* 요소의 첫 번째 줄에 있는 텍스트 */
+/*p:first-letter { color:blue; }                         /* 블록 레벨 요소의 첫 번째 문자 */
 
 /*
     ■ 구체성
@@ -164,3 +164,42 @@ h1#inherit {color:gray}
      3. 선언순서
 
 */
+
+
+/*
+    길이, 단위
+*/
+div.fontTest{font-size: 16px;} /* Window 9pt = 12px Mac 9pt = 9px*/
+p.px{font-size: 12px;} 
+p.pt{font-size: 12pt;} 
+p.percent{font-size: 100%;} /* 부모의 값에 대해서 백분율로 환산한 크기를 갖게 됩니다. */
+p.em{font-size: 1em;} /* 1em = 16px 기본사이즈가 있으면 해당사이즈 x em배수별로 사이즈가 조절됨, 소수점 3자리까지 표현 가능 */
+
+
+
+/*
+    색상
+*/
+
+div.Color{height: 20px; width: 100px; margin: 3px;}
+
+
+/*
+    배경
+*/
+
+div.Background
+{
+    height: 300px;
+    background-color: pink; /* Default : transparent */
+    /*background-image: url(https://i.namu.wiki/i/tYVHziKT6rXrZ-_ESsaq97lgyPmTv512pwGFh8csZO52xHHDoQ13K25AdeTbFJJvu9RhaAal3iTrhYBgZkD-Tt24neQ515iTcHby6h2QJ2Sa7A6SKLyACZqIrRj_qah2fmSny39zitbIPvgK456dYg.webp);*/
+    background-image: url(https://www.w3schools.com/cssref/Img_tree.gif);
+    background-repeat: no-repeat;   /* Default : repeat */
+    background-position: center top;  /* Default : 0% 0% */
+    background-attachment: scrool;  /* Default : scrool */
+}
+div.Background2  /* 축약형 */
+{
+    height: 300px;
+    background: pink url(https://www.w3schools.com/cssref/Img_tree.gif) no-repeat center top
+}
