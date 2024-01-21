@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>display</title>
+  <style>    
+
+    .title
+    {
+        text-decoration: underline;
+    }
+
+    .none .box{
+      display: none;
+    }
+
+    .inline .box {
+      display: inline;
+      /* 적용안됨 (상하는 적용안됨)
+        width: 100px;   
+        height: 100px;  
+      */
+      /* 아래 요소는 다른 요소와 영향이 없기에 좌,우의 값만 선언함 있다*/
+      margin: 10px;   
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+    
+    .inline .box#visible{
+        visibility: hidden;
+    }
+
+    .block .box{
+      display: block;
+      width: 100px;   
+      height: 100px; 
+      margin: 10px;   
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+
+    .inline-block .box {
+      display: inline-block;
+      width: 100px;   
+      height: 100px; 
+      margin: 10px;   
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+
+
+
+
+    .container
+    {
+        width: 400px;
+        padding: 15px;
+        border: 1px dashed #aaa;
+    }
+
+    .container div
+    {
+        width: 100px;
+        height: 100px;        
+    }
+
+    .container .box
+    {
+        width: 100px;
+        height: 100px;        
+    }
+
+    .container div:nth-child(1)
+    {
+        background-color: green;
+    }
+
+    .container div:nth-child(2)
+    {
+        background-color: skyblue;
+    }
+
+    .sibling {
+      padding: 5px;
+      background-color: #eee;
+      text-align: center;
+    }
+
+    .parent {
+      border: 1px dashed #aaa;
+      padding: 10px;      
+
+    }
+
+    .child,
+    .child_offset {
+      width: 60px;
+      height: 60px;
+      padding: 20px;      
+      background-color: #dc3636;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #333;
+    }
+
+    .child_offset {
+      background-color: #3677dc;
+    }
+
+    .static {
+      position: static;
+    }
+
+    .relative {
+      position: relative;      
+    }
+
+    .static {
+      position: static;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+     .z_parent {
+      z-index: 10;
+      position: relative;
+      width: 300px;
+      height: 50px;
+      border: 2px solid #000;
+      background-color: #ccc;
+    }
+
+    .z_child {
+      z-index: 10;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border: 2px solid red;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <br> <h1 class="title"> ■ display </h1>   
+  <h2>none</h2>
+  <div class="none">
+    <div class="box">box</div>
+  </div>
+  <h2>inline</h2>
+  <div class="inline">
+    <div class="box">box</div><div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box" id="visible">box</div>
+  </div>
+  <h2>block</h2>
+  <div class="block">
+    <div class="box">box</div>
+  </div>
+  <h2>inline-block</h2>
+  <div class="inline-block">
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+  </div>
+  <h2>list-item</h2>
+  <div class="list-item">
+    <div class="box">box</div>
+  </div>
+
+  <br> <h1 class="title"> ■ float </h1>   
+  <h3>요소를 보통의 흐름에서 벗어나 띄워지게 함</h3>
+  <div class="container">  
+    <div style="float:left">Box1</div>
+    <div style="float:left">Box2</div>
+    <div style="width: auto; height: auto; border: 2px solid red">Box3</div>
+  </div>
+  <br><br><br><br>
+
+  <h3>주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음</h3>
+  <div class="container">  
+    <div style="float:left">Box1</div>
+    <div style="float:right">Box2</div>
+    <P style="background-color: pink;">
+        주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음
+    </P>
+  </div>
+
+  <h3 style="margin:1px">대부분의 요소에 display값을 block으로 변경함<br></h3>
+  <h5 style="margin:1px">단, Inline-table, flex 등 변경 안됨</h5>
+  <div class="container">  
+    <div style="" class="box">Box1</div>
+    <span style="float: left; background-color: skyblue;" class="box">Box2</span>
+  </div>
+  <br><br><br>
+
+  <br> <h1 class="title"> ■ CLEAR </h1>   
+  <h3>요소를 보통의 흐름에서 벗어나 띄워지게 함</h3>
+  <div class="container">  
+    <div style="float:left">Box1</div>
+    <div style="float:left">Box2</div>
+    <div style="width: auto; height: auto; border: 2px solid red; clear: left ">Box3</div>
+  </div>
+
+  <h3>주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음</h3>
+  <div class="container">  
+    <div style="float:right">Box1</div>
+    <div style="float:right">Box2</div>
+    <span style="display: block; background-color: pink; clear: right;" >
+        주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음
+    </span>
+  </div>
+
+  <br> <h1 class="title"> ■ Position </h1>   
+  <h1>position (Offset 미지정)</h1>
+  <h2>static (기본)</h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child static">static</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>relative</h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child relative">relative</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>absolute</h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <!-- absolute, fixed는 inline요소일때 display:block으로 변경시킴. inline-block 값을 임의 지정했을 때는 그 값을 유지함. -->
+    <span class="child absolute">absolute</span>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>fixed</h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <!-- 현재 fixed는 offset값이 없어 뷰포트 밖으로 밀려나오면서 화면 아래로 사라짐 -->
+    <div class="child fixed">fixed</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+
+  <h1>position (Offset 지정)</h1> 
+  <h2>static - </h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset static" style="top: 40px; left: 40px;">static <br>top: 40, left: 40</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>relative</h2>
+   <!-- 자신이 원래 있어야 할 위치를 기준으로 offset 에 따라 배치된다.
+        부모의 position 속성에 영향을 받지 않는다.
+        Normal -flow의 흐름에 따른다.
+        ★ 부모의 컨텐츠부터 포지션 잡는다
+        주변 요소에 영향을 주지 않으면서 offset 값으로 이동한다 -->
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset relative" style="top: 0px; left: 0px;">relative <br>top: 40, left: 40</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>absolute - parent relative</h2>  
+  <!-- 부모 요소의 위치를 기준으로 offset 에 따라 배치된다.
+       부모가 position 값(static 제외)을 가지면 offset 값의 시작점이 된다.
+       부모의 position 값이 static 인 경우 조상의 position 값이 static이
+       아닐 때까지 거슬러 올라가 기준으로 삼습니다.
+       ★ 부모의 패딩부터 포지션 잡는다
+       Normal-flow의 흐름에서 벗어난다. -->
+  <div class="parent relative">
+    <div class="sibling">Sibling 1</div>    
+    <div class="child_offset absolute" style="top: 0px; left: 0px;">absolute<br>top: 40, left: 80</div>
+    <div class="sibling">Sibling 2</div>    
+  </div>
+
+  <h2>fixed</h2>
+  <!-- 뷰포트(브라우저의 창)를 기준으로 offset 에 따라 배치된다.
+       즉, 화면 스크롤에 관계없이 항상 화면의 정해진 위치에 정보가 나타난다.
+       부모의 위치에 영향을 받지 않는다.-->
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset fixed" style="top:100px;left:80%;">fixed<br>top:100, left:80%</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <br> <h1 class="title"> ■ Z-INDEX  </h1>   
+  <!-- 
+      position 값이 static이 아닌 경우 지정가능
+      ★ 순서 값이 없을 경우 생성순서(코드상 순서)에 따라 쌓임
+      ★ 부모가 z-index 값이 있을 경우 부모 안에서만 의미있음
+      큰 값이 가장 위쪽(음수 사용 가능)  
+
+  -->
+  <div class="wrap">
+
+    <h1 class="practive_title">z-index 속성</h1>
+    <div class="z_area">
+      <div class="z_parent" style="z-index:10">
+        position: relative;
+        <div class="z_child" style="right:20px;z-index:1000;">
+          position: absolute;
+        </div>
+      </div>
+      
+      <div class="z_parent" style="z-index:10">
+        position: relative;
+        
+        <div class="z_child z-index:100;">
+          position: absolute;
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
