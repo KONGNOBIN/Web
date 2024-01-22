@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+       @media screen { ... }
+            : 미디어 타입이 screen이면 적용됩니다.
+
+       @media screen and (min-width: 768px) { ... }
+            : 미디어 타입이 screen이고 width가 768px 이상이면 적용됩니다. 두 개 중 하나라도 만족하지 않으면 거짓이 됩니다.
+
+       @media (min-width: 768px) and (max-width: 1024px) { ... }
+            : and는 연결된 모든 표현식이 참이면 적용됩니다. (and 키워드는 연결된 부분이 모두 참이어야 적용이 됩니다.)
+
+       @media (color-index)
+            : 미디어 장치가 color-index를 지원하면 적용됩니다.
+
+       @media screen and (min-width: 768px), screen and (orientation: portrait), ...
+            : 쉼표로 연결된 미디어 쿼리 중 하나라도 참이면 적용됩니다.( and 키워드와 반대라고 생각하면 됩니다.)
+
+       @media not screen and (min-width: 768px)
+            : not 키워드는 하나의 media_query 전체를 부정합니다.
+            : (not screen) and (min-width: 768px) 잘못된 해석!
+            : not (screen and (min-width: 768px)) 올바른 해석!
+            : @media not screen and (min-width: 768px), print
+              첫 번째 미디어 쿼리에만 not 키워드가 적용되며, 두 번째 미디어 쿼리(print)에는 영향이 없습니다.
+        */
+		/* 1 */
+		@media (max-width: 767px) { /* 모바일 */
+			body { background-color: gold; }
+		}
+		@media (min-width: 768px) and (max-width: 1024px) { /* 테블릿 */
+			body { background-color: lightblue; }
+		}
+		@media (min-width: 1025px) { /* PC */
+			body { background-color: lightpink; }
+		}
+		
+		/* 2 mobile first*/
+		body { background-color: gold; }
+		@media (min-width: 768px) {
+			body { background-color: lightblue; }
+		}
+		@media (min-width: 1025px) {
+			body { background-color: lightpink; }
+		}
+		
+		/* 
+            3 desktop first
+            범위가 겹칠경우 마지막 선언한 요소 기준으로 처리됨
+        */
+		body { background-color: lightpink; }
+		@media (max-width: 1024px) {
+			body { background-color: lightblue; }
+		}
+		@media (max-width: 767px) {
+			body { background-color: gold; }
+		}
+
+		/* 4 print */
+		@media print {
+			a { text-decoration: none; }
+			a:after { display: inline; content: '(' attr(href) ')'; }
+		}
+    </style>
+
+</head>
+<body>
+	<p>W3C는 <a href="https://www.w3.org/TR/css3-mediaqueries/">CSS3 미디어쿼리 문서</a>를 2012년 6월에 표준 권고안으로 제정하였습니다.</p>
+	<p>또한, 기존의 미디어쿼리 개선 작업을 진행 중이며, 2017년 9월에 <a href="https://www.w3.org/TR/mediaqueries-4/">미디어쿼리 레벨4</a>를 발표했습니다. 이 문서는 현재 유력 표준 권고안입니다.</p>
+</body>
+</html>
