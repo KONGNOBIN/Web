@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio I</title>
+
+    <link rel="stylesheet" href="./css/portfolio.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="button_style">
+                <a href="#Table" class="a_button">
+                    <input type="button" value="테이블 요소">
+                </a>
+
+                <a href="#Form" class="a_button">
+                    <input type="button" value="폼 요소">
+                </a>
+
+                <a href="#List" class="a_button">
+                    <input type="button" value="리스트 요소">
+                </a>
+            </div>
+        </header>
+
+
+        <h3>
+            구성 요소
+        </h3>
+        <hr>
+        <!-- <p style="border: 1px solid #aaa;"></p> -->
+        <!-- </p> -->
+
+
+        <section class="section_container">
+            <div class="header_section" id="Table">
+                테이블요소
+            </div>
+
+            <div class="detail_section">
+                <h4 class="title_style">아동 사이즈</h4>
+                <table id="childsize" class="size_style">
+                    <thead>
+                        <tr class="size_style">
+                            <th colspan="2" class="header_style" id="special-column">구분</th>
+                            <th colspan="2" class="header_style">Small</th>
+                            <th colspan="2" class="header_style">Medium</th>
+                            <th colspan="2" class="header_style">Large</th>
+                            <th class="header_style">X-Large</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="size_style">
+                            <th rowspan="3">미국 남아<br>[Boys 2-7]</th>
+                            <th>사이즈</th>
+                            <td>2T</td>
+                            <td>3T</td>
+                            <td>4T</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="size_style">
+                            <th>키</th>
+                            <td>84-91</td>
+                            <td>91-99</td>
+                            <td>91-99</td>
+                            <td>99-107</td>
+                            <td>107-114</td>
+                            <td>114-122</td>
+                            <td>122-130</td>
+                        </tr>
+                        <tr class="size_style">
+                            <th>몸무게</th>
+                            <td>13-15</td>
+                            <td>14-15</td>
+                            <td>13-15</td>
+                            <td>14-15</td>
+                            <td>19-21</td>
+                            <td>20-23</td>
+                            <td>23-25</td>
+                        </tr>
+                        <tr class="size_style">
+                            <th rowspan="3">미국 여아<br>[Girls 2-6X]</th>
+                            <th>사이즈</th>
+                            <td>2T</td>
+                            <td>3T</td>
+                            <td>4T</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>6X</td>
+                        </tr>
+                        <tr class="size_style">
+                            <th>키</th>
+                            <td>84-91</td>
+                            <td>91-99</td>
+                            <td>91-99</td>
+                            <td>99-107</td>
+                            <td>107-114</td>
+                            <td>114-122</td>
+                            <td>122-130</td>
+                        </tr>
+                        <tr class="size_style">
+                            <th>몸무게</th>
+                            <td>13-15</td>
+                            <td>14-15</td>
+                            <td>13-15</td>
+                            <td>14-15</td>
+                            <td>19-21</td>
+                            <td>20-23</td>
+                            <td>23-25</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title_style">환불 가능 금액 조회</h4>
+                <table class="refund_style">
+                    <thead>
+                        <tr>
+                            <td class="header_style" id="refund_head_style">구분</td>
+                            <td class="header_style" id="refund_head_style">환불가능액</td>
+                            <td class="header_style" id="refund_head_style">수수료</td>
+                            <td class="header_style" id="refund_head_style">총 환불금액</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="refund_style">게임 보상금액</td>
+                            <td class="refund_style" id="refund_body_style">100,000원</td>
+                            <td class="refund_style" id="refund_body_style">1,000원</td>
+                            <td class="refund_style" id="refund_body_style">99,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="refund_style">월정액제 보상금액</td>
+                            <td class="refund_style" id="refund_body_style">10,000원</td>
+                            <td class="refund_style" id="refund_body_style">5,000원</td>
+                            <td class="refund_style" id="refund_body_style">5,000원</td>
+                        </tr>
+                        <tr>
+                            <td class="refund_style">코인</td>
+                            <td class="refund_style" id="refund_body_style">9,000원</td>
+                            <td class="refund_style" id="refund_body_style">500원</td>
+                            <td class="refund_style" id="refund_body_style">8,500원</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="refund_style" id="refund_foot_style">총합계</th>
+                            <th class="refund_style" id="refund_foot_style">119,000원</th>
+                            <th class="refund_style" id="refund_foot_style">6,500원</th>
+                            <th class="refund_style" id="refund_foot_style">112,500원</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="section_container">
+            <div class="header_section" id="Form">
+                폼 요소
+            </div>
+            <div class="detail_section">
+                <h4 class="title_style">회원 가입</h4>
+                <div class="join_container">
+                    <div class="join_style">
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid">
+                    </div>
+                    <div class="join_style">
+                        <label for="userpw">비밀번호</label>
+                        <input type="text" id="userpw">
+                    </div>
+                    <div class="join_style">
+                        <label for="username">이름</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="join_style">
+                        <label for="userdata">생년월일</label>
+                        <div class="data-right-style">
+                            <select id="EmpType" name="userdata">
+                                <option selected>년도</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                            </select>
+                        </div>
+                        <div class="data-center-style">
+                            <select id="Month" name="userdata">
+                                <option selected>월</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="data-left-style">
+                            <select id="Day" name="userdata">
+                                <option selected>일</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="join_style">
+                        <input type="radio" name="sex" id="male">
+                        <label for="male" id="sextype" class="boxstyle">남자</label>
+                        <input type="radio" name="sex" id="female">
+                        <label for="female" id="sextype" style="display: inline;">여자</label>
+                    </div>
+                    <div class="join_style">
+                        <label for="useremail">이메일</label>
+                        <input type="text" id="useremail" placeholder="이메일 주소에 '@'를 포함해주세요.">
+                    </div>
+                    <div class="join_style">
+                        <label for="userphone">휴대전화</label>
+                        <div>
+                            <div class="phone-right-style">
+                                <input type="text" id="userphone" placeholder="숫자만 입력해주세요.">
+                            </div>
+                            <div class="phone-left-style">
+                                <button type="submit" id="buttonstyle">인증번호</button>
+                            </div>
+                        </div>
+                        <input type="text" id="autnum" placeholder="인증번호를 입력해주세요.">
+                    </div>
+                    <div class="join_style">
+                        <input type="checkbox" name="hobby" id="hobby1">
+                        <label for="exercise" id="hobby1" class="boxstyle">운동</label>
+                        <input type="checkbox" name="hobby" id="hobby2">
+                        <label for="cook" id="hobby2" class="boxstyle">요리</label>
+                        <input type="checkbox" name="hobby" id="hobby3">
+                        <label for="travel" id="hobby3" class="boxstyle">여행</label>
+                        <input type="checkbox" name="hobby" id="hobby4">
+                        <label for="game" id="hobby4" class="boxstyle">게임</label>
+                        <input type="checkbox" name="hobby" id="hobby5">
+                        <label for="computer" id="hobby5" class="boxstyle">컴퓨터</label>
+                        <input type="checkbox" name="hobby" id="hobby6">
+                        <label for="music" id="hobby6" class="boxstyle">음악</label>
+                        <input type="checkbox" name="hobby" id="hobby7">
+                        <label for="movie" id="hobby7" class="boxstyle">영화</label>
+                        <input type="checkbox" name="hobby" id="hobby8">
+                        <label for="reading" id="hobby8" class="boxstyle">독서</label>
+
+                        <div class="join_style">
+                            <label for="usermeet">가입인사</label>
+                            <input type="text" id="usermeet" style="height: 100px;">
+                        </div>
+                        <div class="join_style">
+                            <button type="submit" id="buttonstyle">가입하기</button>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section class="section_container">
+            <div class="header_section" id="List">
+                리스트 요소
+            </div>
+            <div class="detail_section">
+                <dl>
+                    <dt>
+                        <h4 class="title_style">'프로젝트' 사전 검색 결과</h4>
+                    </dt>
+                    <div class="join_container">
+                        <dl>
+                            <dt style="text-align: center; font-size: 32px; font-weight: bold;">프로젝트</dt>
+                            <dl>
+                                <dt class="title_style">프로젝트</dt>
+                                <dd>
+                                    연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한
+                                    목표, 계획을 위한 학습활동, 실행계획 등을 가리킨다.
+                                </dd>
+                                <dt class="title_style">프로젝트</dt>
+                                <dd>
+                                    어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위
+                                    작업이나 사업.
+                                </dd>
+                            </dl>
+                        </dl>
+
+
+                    </div>
+                    <dt>
+                        <h4 class="title_style">실시간 검색어</h4>
+                    </dt>
+                    <div class="join_container">
+                        실시간
+                    </div>
+                    <dt>
+                        <h4 class="title_style">쿠키 이용안내</h4>
+                    </dt>
+                    <div class="join_container">
+                        쿠키이용
+                    </div>
+                    <dt>
+                        <h4 class="title_style">뉴스</h4>
+                    </dt>
+                    <div class="join_container">
+                        뉴스
+                    </div>
+                    <dt>
+                        <h4 class="title_style">웹툰</h4>
+                    </dt>
+                    <div class="join_container">
+                        웹툰
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

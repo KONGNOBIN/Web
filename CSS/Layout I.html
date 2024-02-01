@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <style>
+        * {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .header>h1 {
+            font-family: 'Fascinate', system-ui;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+
+    <style>
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .content {
+            overflow: hidden;
+
+        }
+
+        .section {
+            width: 700px;
+            float: left;
+        }
+
+        .aside {
+            width: 250px;
+            float: right;
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left
+        }
+
+        .header {
+            height: 100px;
+            position: relative;
+        }
+
+        .header h1 {
+            position: absolute;
+            left: 10px;
+            top: 30px
+        }
+
+        .gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .lnb {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .container div {
+            box-sizing: border-box;
+            border: 1px solid;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <style>
+        input {
+            display: none;
+        }
+
+        input:nth-of-type(1)~div:nth-last-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-last-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(1):checked~div:nth-last-of-type(1) {
+            display: block;
+        }
+
+        input:nth-of-type(2):checked~div:nth-last-of-type(2) {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Consequatur culpa excepturi veniam officia.</h1>
+            <div class="gnb">
+                <ul>
+                    <li>Kong</li>
+                    <li>Kim</li>
+                    <li>Pack</li>
+                    <li>Lee</li>
+                    <li>Jo</li>
+                </ul>
+            </div>
+            <div class="lnb">
+                <ul>
+                    <li>Kong</li>
+                    <li>Kim</li>
+                    <li>Pack</li>
+                    <li>Lee</li>
+                    <li>Jo</li>
+                    <li>Sec</li>
+                    <li>No</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section">
+                <article>
+                    <h1>Test Test</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta atque fugiat qui
+                        voluptates voluptatibus nesciunt cumque necessitatibus! Doloremque fuga hic, quidem eligendi
+                        nemo numquam quod pariatur modi voluptatem assumenda?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo exercitationem iusto corrupti
+                        tempora quidem nesciunt minima reiciendis voluptates earum dignissimos repellendus aut, harum
+                        mollitia asperiores magni consequuntur aliquam quos incidunt.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo exercitationem iusto corrupti
+                        tempora quidem nesciunt minima reiciendis voluptates earum dignissimos repellendus aut, harum
+                        mollitia asperiores magni consequuntur aliquam quos incidunt.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta atque fugiat qui
+                        voluptates voluptatibus nesciunt cumque necessitatibus! Doloremque fuga hic, quidem eligendi
+                        nemo numquam quod pariatur modi voluptatem assumenda?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta atque fugiat qui
+                        voluptates voluptatibus nesciunt cumque necessitatibus! Doloremque fuga hic, quidem eligendi
+                        nemo numquam quod pariatur modi voluptatem assumenda?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta atque fugiat qui
+                        voluptates voluptatibus nesciunt cumque necessitatibus! Doloremque fuga hic, quidem eligendi
+                        nemo numquam quod pariatur modi voluptatem assumenda?ssssssdsaddadasdasssdadasdasdasd</p>
+                </article>
+            </div>
+            <div class="aside">
+                <label for="tab-1">TAB1</label>
+                <label for="tab-2">TAB2</label>
+                <input type="radio" name="tab" id="tab-1" checked="checked">
+                <input type="radio" name="tab" id="tab-2">
+                <div class="tab-item">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore
+                    ullam quae labore perspiciatis inventore, nemo necessitatibus reprehenderit adipisci numquam
+                    recusandae totam dolores quaerat consequuntur aperiam eius quia possimus praesentium! ipsum dolor
+                    sit</div>
+                <div class="tab-item">xcxcxcxolor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
+                    assumenda repellat dolores pariatur mollitia facere numquam placeat ducimus maxime labore deserunt
+                    dolore totam quibusdam a suscipit iste sunt, nulla vel.sit</div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, ipsum sit sequi velit eos consequatur.
+                Blanditiis porro, laudantium odio corrupti optio alias exercitationem ullam commodi molestias error
+                soluta voluptatibus quo.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

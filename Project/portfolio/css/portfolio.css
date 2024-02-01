@@ -1,0 +1,203 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+    /*font-family: '맑은 고딕', sans-serif; */
+    font-family: 'Nanum Gothic', cursive;
+    margin: 0 auto;
+    width: 900px;
+    /*
+    display: flex;
+    align-items: center;    
+    margin: 50px;      
+    flex-direction: column;     
+    */
+}
+
+
+div.button_style {
+    border-collapse: collapse;
+}
+
+h3 {
+    font-size: 20px;
+    color: #020202;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a.a_button {
+    display: inline-block;
+}
+
+input[type="button"] {
+
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: white;
+    margin: 5px;
+    border-color: gainsboro;
+    padding: 5px 20px;
+    width: 270px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.section_container {
+    font-size: 14px;
+    border: 1px solid #a5a5a5;
+    margin-bottom: 20px;
+}
+
+.header_section {
+    background-color: rgb(247, 247, 247);
+    padding: 10px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.detail_section {
+    padding: 10px 20px;
+}
+
+.title_style {
+    text-align: left;
+    font-weight: Extra Bold;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* 셀 너비 동일 고정 */
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+
+tr td,
+th {
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+}
+
+.size_style {
+    border: 1px solid #e4e4e4;
+}
+
+
+.header_style {
+    background-color: rgb(250, 250, 250);
+}
+
+#special-column {
+    width: 23%;
+}
+
+
+table.refund_style {
+    border-top: 2px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+td.refund_style {
+    border: 0px;
+}
+
+#refund_head_style {
+    border: 0px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#refund_body_style {
+
+    text-align: right;
+}
+
+
+#refund_foot_style {
+    border: 0px;
+    border-top: 1px solid #a5a5a5;
+}
+
+.join_container {
+    background-color: #Fbfbfb;
+    margin: 10px 10px;
+    border: 1px solid #e4e4e4;
+    padding-top: 20px;
+}
+
+.join_style {
+    padding: 10px 25px 10px 35px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    font-size: 12px;
+    color: #000;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #e4e4e4;
+    padding-left: 5px;
+    margin-bottom: 2px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+div.data-right-style {
+    float: left;
+    width: 33%;
+}
+div.data-left-style {
+    overflow: hidden;    
+}
+div.data-center-style {
+    float: right;
+    width: 33%;  
+}
+
+select {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #e4e4e4;
+}
+
+#buttonstyle {
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    height: 33px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.join_style .boxstyle {
+    display: inline;
+    margin-right: 7%;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+div.phone-right-style {
+    float: left;
+    width: 80%;
+}
+
+
+div.phone-left-style {
+    overflow: hidden;
+}
