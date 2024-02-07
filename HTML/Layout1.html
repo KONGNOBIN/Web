@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 레이아웃 [float]</title>
+
+    <style>
+        html, body, .wrap{
+            height: 100%;
+        }
+
+        .wrap {
+            text-align: center;
+        }
+
+        .header,
+        header {
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+        .container{
+            position: relative;
+            width: 800px;
+            min-height: 100%;
+            margin: -100px auto;
+            padding: 100px 0;
+            box-sizing: border-box;
+        }
+
+        .container:after{
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        .content,
+        section {
+            float:left;
+            width: 500px;
+            height: 300px;
+            background-color: lightsalmon;            
+            margin: 0 auto;
+        }
+        
+        .aside, aside{
+            float:left;
+            height: 300px;
+            width: 300px;
+            background-color: lightseagreen;                
+        }
+
+        .aside:after{
+            position: absolute;
+            top: 100px;
+            bottom:  100px;
+            right : 300px;
+            content: '';
+            width: 3px;
+            background-color: #000;
+        }
+
+        .footer,
+        footer {
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="container">            
+            <div class="content">content</div>
+            <div class="aside">aside</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+    <hr>
+
+    <div class="wrap">
+        <header>header</header>
+        <div class="container">
+            <section>content</section>
+            <aside>aside</aside>
+        </div>
+        
+        <footer>footer</footer>
+    </div>
+
+</body>
+
+</html>
