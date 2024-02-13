@@ -35,9 +35,51 @@
         .wrap{
             max-width: 700px;
             min-width: 500px;
-            margin: 5px;
+            margin: 5px;            
         }
 
+        .menu{
+            display: table;
+            table-layout: fixed;    /* 테이블 너비 동일하게 */
+            width: 100%;
+        }
+
+        .menu_item{
+            display: table-cell;            
+        }
+
+        .menu_link{
+            display: block;
+            height: 36px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+            line-height: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* + : 인접 */
+        .menu_item + .menu_item .menu_link{
+            margin-left: -1px;
+        }
+
+        /*
+            menu_link에 hover해도되지만
+            확정성을 생각했을땐 부모에 효과를 주는게 낫다.
+        */
+        .menu_item:hover .menu_link{
+            color:green;
+            font-weight: bold;
+        }
+
+        .menu_item.active .menu_link{
+            position: relative; /* z-index가 새롭게 생성되어 해당요소가 상단으로 표시 */
+            border-color: #555;
+            font-weight: bold;
+            color:#fff;
+            background-color: gray;
+
+        }
 
     </style>
 </head>
@@ -46,7 +88,7 @@
     <div class="wrap">
         <ul class="menu">
             <li class="menu_item"><a href="#" class="menu_link">메일</a></li>
-            <li class="menu_item"><a href="#" class="menu_link">카페</a></li>
+            <li class="menu_item active"><a href="#" class="menu_link">카페</a></li>
             <li class="menu_item"><a href="#" class="menu_link">소프트웨어</a></li>
             <li class="menu_item"><a href="#" class="menu_link">지식백과</a></li>
             <li class="menu_item"><a href="#" class="menu_link">영화</a></li>
