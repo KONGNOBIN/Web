@@ -44,6 +44,7 @@ a {
 .tab_item + .tab_item .tab_btn {
     width: 101px;
     margin-left: -1px;
+    /* border-left: 0; */
 }
 /* 탭 목록 오버 시, 활성화 시 효과 */
 .tab_item .tab_btn:hover,

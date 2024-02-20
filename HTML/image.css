@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* 기본 스타일 */
+body {
+    font-family: Dotum,'돋움', Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #3c3c3c;
+}
+a {
+    color: inherit;
+    text-decoration: none;    /* 선으로 텍스트 꾸밈 속성 */
+    vertical-align: top;      /* 수직정렬 지정 */
+}
+img {
+    vertical-align: top;
+}
+
+h1 {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    line-height: 38px;        /* 텍스트의 라인 높이 지정 */
+    font-size: 26px;
+    color: #000;
+}
+
+
+.main_wrap {
+    background-color: #ececec;
+}
+.main_wrap .content {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0 20px;
+}
+.main_wrap .noti_txt {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: 12px;
+    color: #7c7c7c;
+}
+.main_list:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.main_list li {
+    float: left;
+}
+.main_list li + li {
+    margin-left: 17px;
+}
+.main_list li .item_link {
+    position: relative;
+    display: block;
+}
+.main_list .img_box {
+    position: relative;
+}
+.main_list .img_box:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.main_list .img_box img {
+    width: 322px;
+    height: 215px;
+}
+.main_list .info {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    overflow: hidden;
+}
+.main_list .category {
+    font-size: 14px;
+}
+.main_list .title {
+    margin-top: 3px;
+    font-size: 18px;
+    line-height: 22px;
+    overflow: hidden;           /* 텍스트가 요소의 경계를 벗어나지 않도록 제한 */
+    text-overflow: ellipsis;    /* 텍스트가 잘린 경우 ...을 추가 */
+    white-space: nowrap;        /* 텍스트가 줄 바꿈되지 않도록 방지 */
+}
+.sub_wrap {
+    margin-top: 30px;
+}
+.sub_list {
+    width: 1000px;
+    margin: 0 auto;
+}
+.sub_list:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.sub_list li {
+    float: left;
+    width: 188px;
+    margin-bottom: 40px;
+}
+.sub_list li + li {
+    margin-left: 15px;
+}
+.sub_list li:nth-child(5n+1) {
+    margin-left: 0;
+}
+.sub_list .item_link {
+    display: block;
+    position: relative;
+}
+.sub_list .item_link:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+.sub_list .item_link img {
+    width: 188px;
+    height: 141px;
+}
+.sub_list .info {
+    height: 79px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.sub_list .title {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 36px;
+    font-size: 15px;
+    line-height: 18px;
+    text-overflow: ellipsis;          /* 텍스트가 잘린 경우 ...을 추가 */
+    -webkit-box-orient: vertical;     /* 레이아웃이 열로 표시 , 단 이거대신에 flex-direction 이걸 사용해라 */    
+    -webkit-line-clamp: 2;            /* 텍스트를 지정한 줄 수로 제한 */
+    word-break: break-all;            /* 어떤 문자든 줄 바꿈이 가능 */
+    color: #090909;
+}
+.sub_list .category_link {
+    display: block;
+    padding-top: 3px;
+    font-size: 12px;
+    color: #7ba7df;
+}
