@@ -1,0 +1,104 @@
+.content {
+	height: 5000px;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    text-align: center;
+}
+
+.popup_layer {
+	position: relative;
+	width: 300px;
+	min-height: 150px;
+	padding-bottom: 50px;
+	background: #fff;
+	z-index: 10;          /* position: relative; 필수 */
+}
+
+.popup_layer_ex1 {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	width: 300px;
+	height: 150px;
+	padding-bottom: 50px;
+    margin: -100px 0 0 -150px; 
+	background: #fff;
+	z-index: 10;
+}
+
+.popup_layer_ex2 {
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	width: 300px;
+	height: 150px;
+	padding-bottom: 50px;
+    margin: auto; 
+	background: #fff;
+	z-index: 10;
+}
+
+.popup:after {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 100%;
+	content: '';
+}
+
+.popup_layer_ex3 {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	min-height: 150px;
+	padding-bottom: 50px;
+	background: #fff;
+	z-index: 10;
+}
+
+.text_area {
+	padding: 50px 30px 30px;
+	text-align: center
+}
+
+.btn_area {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	overflow: hidden;     /* 자식요소에 float: left; 선언했기때문 */
+}
+
+.btn {
+	float: left;         
+	width: 50%;
+	height: 100%;
+	font-size: 15px;
+	font-weight: bold;
+	border: 0;
+	background: pink;
+}
+
+.btn.no {
+	background: lightblue;
+}
+
+.popup_dimmed {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.3;
+}

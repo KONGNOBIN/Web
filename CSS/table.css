@@ -15,6 +15,12 @@ table {
 
 .col {
 	width: 90px;
+	background: #f01e1e;
+}
+
+th[scope=rowgroup], th[scope=col]
+{
+	background-color: white;
 }
 
 th {

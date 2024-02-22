@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox 달력</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      width: 250px;
+
+    }
+
+    .calendar {
+      display: flex;
+      flex-wrap: wrap;
+      width: 500px;     /* 달력의 전체 너비 */
+    }
+
+    .dayofweek{
+      width: calc(100% / 7); /* 각 요일의 너비는 총 7일이므로 */
+      border: 1px solid #e7e7e7;
+      padding: 5px;
+      box-sizing: border-box;        
+    }
+
+    .daydimm {
+      width: calc(100% / 7); 
+      color: #e7e7e7;
+      border: 1px solid #e7e7e7;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .day {
+      width: calc(100% / 7); /* 각 요일의 너비는 총 7일이므로 */
+      border: 1px solid #e7e7e7;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="dayofweek">일</div>
+    <div class="dayofweek">월</div>
+    <div class="dayofweek">화</div>
+    <div class="dayofweek">수</div>
+    <div class="dayofweek">목</div>
+    <div class="dayofweek">금</div>
+    <div class="dayofweek">토</div>
+        
+    <div class="daydimm">28</div>
+    <div class="daydimm">29</div>
+    <div class="daydimm">30</div>
+    <div class="daydimm">31</div>
+    <div class="day">5</div>
+    <div class="day">6</div>
+    <div class="day">7</div>
+    <div class="day">8</div>
+    <div class="day">9</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">17</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+    <div class="day">30</div>
+  </div>
+</body>
+</html>

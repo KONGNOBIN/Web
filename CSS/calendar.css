@@ -3,6 +3,12 @@ body{
     margin: 100px auto 0px;
 }
 
+.title{
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
 table, th {
 	border: 1px solid #eaedef;
 	border-collapse: collapse;
@@ -50,6 +56,10 @@ th {
 
 .date.holiday {
 	color: #f44e4e;
+}
+
+.date.Satuday {
+	color: #00c;
 }
 
 .text.holiday {
