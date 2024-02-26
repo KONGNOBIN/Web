@@ -1,0 +1,255 @@
+body{
+    padding: 35px;
+
+}
+
+/* TEXTBOX */
+
+.text_form{
+    width: 198px;
+    margin-top: 20px;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.text_form input{
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    border: 0 none;
+    font-size: 15px;
+}
+
+/* ::(프리픽스)가 붙는 내용들은 개별적으로 작성해야 한다 */
+/* placeholder IE 브라우저를 제외한 타 브라우저 대응 */
+.text_form input[type=text]::placeholder {
+    color: red;
+    opacity: 1;  /* Firefox browser 대응*/
+}
+
+/* IE browser 대응 */
+.text_form input[type=text]:-ms-placeholder {
+    color: red;            
+}
+
+/* Edge browser 대응 */
+.text_form input[type=text]::-ms-placeholder {
+    color: red;            
+}
+
+
+.text_form input[type=password]::placeholder {
+    color: blue;
+}
+
+.textarea textarea::placeholder {
+    color: green
+}
+
+
+.textarea
+{
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.textarea textarea
+{
+    width: 100%;
+    height: 100%;                        
+    border: 0 none;
+    padding: 0;
+    font-size: 15px;
+    resize: none;
+}
+
+
+
+/* CheckBox */
+.check_form,
+.check_form2,
+.radio_form {
+    margin-top: 20px;    
+}
+
+/* 기본 input 초기화.. 속성 이해 안감 */
+.check_form input, .check_form2 input, .radio_form input {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    opacity: 0;  /* 완전 투명하게 */
+}
+
+.check_form label {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 36px;
+    height: 21px;
+    border-radius: 10px;
+    background-color: #666;
+    color: transparent;
+
+}
+
+.check_form label:before{
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    content: '';
+    width: 19px;
+    height: 19px;
+    border-radius: 50%; 
+    background-color: #fff;
+}
+
+.check_form input:checked + label {
+    background-color: blue;
+
+}
+
+.check_form input:checked + label::before {
+    left:auto;
+    right: 1px;
+}
+
+
+
+
+.check_form2 label:before{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px 5px 0 0;
+    background: url('/HTML/img/checkbox.png') no-repeat 0 0;
+    background-size: 20px;
+    vertical-align: top;
+    content: '';
+}
+
+.check_form2 input:checked + label:before{
+    background-image: url('/HTML/img/checkbox_on.png')
+}
+
+/* Radio */
+
+.radio_form label:before{
+    display: inline-block;
+    width: 20px;
+    height: 20px;    
+    margin: 2px 5px 0 0;
+    background: url('/HTML/img/radio.png') no-repeat 0 0;
+    background-size: 20px;
+    vertical-align: top;
+    content: '';
+}
+
+.radio_form input:checked + label:before{
+    background-image: url('/HTML/img/radio_on.png');
+}
+
+
+/*File*/
+.file_form {
+    position: relative; /* position 기준 */
+    display: inline-block;
+    width: 198px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid cornflowerblue;
+    font-size: 12px;
+}
+.file_form .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding: 0 50px 0 10px;
+    white-space: nowrap;
+}
+.file_form .text:after { /* 버튼형태 구현 */
+    position: absolute;
+    top:0;right:0;
+    width: 50px;
+    background-color: cornflowerblue;
+    text-align: center;
+    color: #fff;
+    content:'파일찾기';
+}
+.file_form input[type='file'] {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 10;
+    width: 100%;
+    opacity: 0;
+}
+
+.file_form_img {
+    width: 100px; /* 프로필 등록 사이즈 지정 */
+}
+.file_form_img .img {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border:1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+.file_form_img .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.file_form_img .file {
+    position: relative;
+    display: block;
+    margin: 10px auto 0; /* 버튼 가운데 정렬 */
+    background:url('/HTML/img/btn_file.jpg') no-repeat;
+    width: 82px;
+    height: 24px;
+}
+.file_form_img .file input[type=file] {
+    position: absolute;
+    z-index: 10;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+/* Select */
+
+.select_form {
+    display: block;
+    position: relative;
+    width: 198px;
+    height: 38px;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.select_form select {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 0 10px;
+    background-color: transparent;
+    border: 0 none;
+    font-size: 16px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.select_form:after {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    background:url('/HTML/img/select.png') no-repeat 0 0;
+    width: 13px;
+    height: 7px;
+    display: block;
+    content:'';
+}
