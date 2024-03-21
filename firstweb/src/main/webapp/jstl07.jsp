@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 <c:set var="t" value="<script type='text/javascript'>alert(1);</script>" />
 ${t}
